@@ -15,7 +15,7 @@ def in_place_solution():
     count = int(val[0]) + int(val[1]) + int(val[2])
     for i in range(1, len(val) - 2):
         if count < (int(val[i]) + int(val[i + 1]) + int(val[i + 2])):
-            increased = increased + 1
+            increased += 1
             count = int(val[i]) + int(val[i + 1]) + int(val[i + 2])
 
     print("increased", increased)
