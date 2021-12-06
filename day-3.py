@@ -1,6 +1,3 @@
-from reader.file_reader import *
-
-
 def read():
     with open("inputs/day-3.txt") as f:
         content = f.read().split("\n")
@@ -32,7 +29,7 @@ def puzzle1():
     print("puzzle1", str(int(gamma_rate, 2) * int(epsilon_rate, 2)))
 
 
-def oxygen_generator(one: str, zero: str):
+def oxygen_co2_generator(one: str, zero: str):
     content = read()
     needed_list = []
 
@@ -66,5 +63,8 @@ def oxygen_generator(one: str, zero: str):
 puzzle1()
 print(
     "puzzle2",
-    str(int(oxygen_generator("1", "0")[0], 2) * int(oxygen_generator("0", "1")[0], 2)),
+    str(
+        int(oxygen_co2_generator("1", "0")[0], 2)
+        * int(oxygen_co2_generator("0", "1")[0], 2)
+    ),
 )
